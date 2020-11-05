@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title> Home </title>
+  <link rel="stylesheet" href="bootstrap-4.1.2-dist/css/bootstrap.css">
+  <link rel="stylesheet" href="main.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+  <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="scroll-down.js"></script>
+</head>
+
+<body>
+
+  <!-- NAV -->
+  <div class="wrapper">
+    <header>
+      <nav>
+        <div class="menu-icon">
+          <i class="fa fa-bars fa-2x"></i>
+        </div>
+        <div class="logo">
+          Arin
+        </div>
+        <div class="menu">
+          <ul>
+            <li> <a href="index.html" class="rightnow"> Home</a> </li>
+            <li> <a href="#"> Jobs </a> </li>
+            <li> <a href="#"> Blogs</a> </li>
+            <li> <a href="#"> Resources </a> </li>
+            <li> <a href="#"> About Us</a> </li>
+
+          </ul>
+        </div>
+      </nav>
+    </header>
+  </div>
+
+  <!--Javascript-->
+
+  <script type="text/javascript">
+    /* global $ */
+
+    $(document).ready(function() {
+      $(".menu-icon").on("click", function() {
+        $("nav ul").toggleClass("showing");
+      });
+    });
+
+    $(window).on("scroll", function() {
+      if ($(window).scrollTop()) {
+        $('nav').addClass('black');
+      }
+
+      else {
+        $('nav').removeClass('black');
+      }
+    });
+
+    $(document).ready(function(){
+  $("a").on('click', function(event) {
+    if (this.hash !== "") {
+      event.preventDefault();
+      var hash = this.hash;
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 800, function(){
+        window.location.hash = hash;
+      });
+    }
+  });
+});
+  </script>
+
+
+  <!-- TEXT ON THE IMAGE -->
+  <div class="container">
+    <div class="bigtext">
+      <h1> Computer Science </h1>
+      <br>
+      <h3> </h3>
+      <a class="ct-btn-scroll ct-js-btn-scroll" href="#parallax-one">
+        <img alt="Arrow Down Icon" src="https://www.solodev.com/assets/anchor/arrow-down.png">
+      </a>
+    </div>
+  </div>
+
+
+  <section class="jumbotron" id="parallax-one">
+    <div class="container">
+      <br><br>
+      <h1> </h1>
+     
+      <!--A LITTLE TOO OVER THE TOP
+      <br>
+      <h4 class="rainbow"> This website is now Mobile Friendly!!!</h4> -->
+      <hr>
+    </div>
+  </section>
+  <!--MAIN CONTENT-->
+ 
+</body>
+
+</html>
