@@ -134,13 +134,21 @@ nav .icon-burger .line {
 /* ================================================== */
 
 /* Header stylings */ 
-header {
+.homepageHeader {
     width: 100%;
     height: 100vh;
     background: linear-gradient(to top, rgba(32, 172, 232, 0.687), rgba(117, 22, 201, 0.73)), url(images/supercomputer-background.jpg) no-repeat 50% 50%;
     background-size: cover;
 
 }
+        .jobsHeader {
+             width: 100%;
+             height: 100vh;
+             background: linear-gradient(to top, rgba(32, 172, 232, 0.687), rgba(117, 22, 201, 0.73)), url(images/jobs_header.gif) no-repeat 50% 50%;
+             background-size: cover;
+
+                     
+                 }
 .container h1 {
     color: white;
 
