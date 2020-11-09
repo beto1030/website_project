@@ -1,0 +1,283 @@
+/* Universal Stylings */
+
+:root {
+    --darkgray: #151618;
+    --teal: #1bccf4;
+    --white: white;
+    --darkergray: #141212;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Nunito', sans-serif;   
+    scroll-behavior: smooth;
+    
+    
+}
+
+/* ================================================== */
+
+/* Navbar stylings */ 
+
+
+nav {
+    position: fixed;
+    z-index: 10;
+    left: 0;
+    right:0;
+    top: 0;
+    height: 120px;
+    background-color: var(--darkgray);
+    padding: 0 5%;
+}
+
+nav .logo{
+    float: left;
+    width: 40%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    color: white;
+    font-size: 24px;
+    
+}
+
+nav .links {
+    float: right;
+    padding: 0;
+    margin: 0;
+    width: 40%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+nav .links li {
+    list-style: none;
+    
+}
+
+nav .links a{
+    display: block;
+    padding: 1em;
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+}
+
+.current {
+    color: var(--teal) !important;
+}
+#nav-toggle {
+    position: absolute;
+    display: none;
+}
+
+nav .icon-burger {
+    display: none;
+    position: absolute;
+    right: 5%;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+nav .icon-burger .line {
+    width: 30px;
+    height: 5px;
+    background-color: white;
+    margin: 5px;
+    border-radius: 3px;
+
+}
+@media screen and (max-width: 1600px) {
+    nav .links {
+        width: 60%;
+    }
+}
+@media screen and (max-width: 1100px) {
+    nav .links {
+        float: none;
+        position: fixed;
+        z-index: 9;
+        left: 0;
+        right: 0;
+        top: 120px;
+        bottom: 100%;
+        width: auto;
+        height: auto;
+        background-color: rgba(0,0,0,0.8);
+        flex-direction: column;
+        overflow: hidden;
+        transition: all .5s ease-in-out;
+        justify-content: space-evenly;
+    }
+
+    nav .icon-burger {
+        display: block;
+    }
+
+    nav .logo{
+        float: none;
+        width: auto;
+        justify-content: center;
+    }
+
+    nav :checked ~ .links {
+        bottom: 0;
+    }
+} 
+/* ================================================== */
+
+/* Header stylings */ 
+header {
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(to top, rgba(32, 172, 232, 0.687), rgba(117, 22, 201, 0.73)), url(images/supercomputer-background.jpg) no-repeat 50% 50%;
+    background-size: cover;
+
+}
+.container h1 {
+    color: white;
+
+}
+
+.big-text h1{
+    position: absolute;
+    background-attachment: inherit;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    z-index: 2;
+    text-align: center;
+    letter-spacing: 2px;
+
+}
+
+.scroll-down-button {
+    height:40px;
+    width: 40px;
+    border: white 2px solid;
+    border-radius: 50px;
+    z-index: 4;
+    position: absolute;
+    bottom: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.scroll-down-button .line1 {
+    width: 10px;
+    height: 2px;
+    background-color: white;
+    margin: 5px;
+    border-radius: 3px;
+    transform: rotate(55deg);
+    position: absolute;
+    bottom: 30%;
+    right: 30%;
+    transition: 0.3s;
+    
+
+}
+
+.scroll-down-button .line2 {
+    width: 10px;
+    height: 2px;
+    background-color: white;
+    margin: 5px;
+    border-radius: 3px;
+    transform: rotate(305deg);
+    position: absolute;
+    bottom: 30%;
+    left: 30%;
+    transition: 0.3s;
+
+  }
+
+  .scroll-down-button a {
+    height:40px;
+    width: 40px;
+    
+    z-index: 4;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+  }
+
+  .scroll-down-button:hover {
+    
+    background-color: white;
+   
+}
+  
+.scroll-down-button:hover > a .line1{
+    background: linear-gradient(to top, rgba(32, 172, 232, 0.687), rgba(117, 22, 201, 0.73))
+    
+}
+.scroll-down-button:hover > a .line2{
+    background: linear-gradient(to top, rgba(32, 172, 232, 0.687), rgba(117, 22, 201, 0.73))
+    
+}
+  /* ================================================== */
+
+/* Main Content stylings */ 
+/* mainContainer */
+#mainContainer {
+    display: flex;
+    justify-content: space-evenly;
+    background-color: var(--darkgray);
+    color: var(--white);
+    padding-top: 20px;
+}        
+        /* sidebar */
+        .sidebar {
+            width: 20%;
+            padding: 5px 30px;
+        }
+            .sidebar ul {
+                 list-style: none;
+                 margin-top: 15px;
+            }
+            .sidebar ul li {
+                padding: 5px 0;
+            }
+        /* leftSection */
+        .leftSection {
+            width: 50%;
+            padding: 5px 30px;
+        }
+
+        /* rightSection */
+        .rightSection {
+            width: 50%;
+            padding: 5px 30px;
+        }
+        .rightSection .links {
+            padding-top: 100px;
+        }
+        .rightSection ul {
+           margin-left: 18px; 
+        }
+        .rightSection ul a{
+            color: var(--white);
+            text-decoration: none;
+        }
+
+
+/* footer */
+footer {
+    background-color: var(--darkergray);
+    color: var(--white);
+    text-align: center;
+    padding: 80px 0;
+}
